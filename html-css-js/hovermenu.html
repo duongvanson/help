@@ -33,15 +33,24 @@
 			for (var i = 0; i < sub.length; i++) {
 				sub[i].classList.remove("active");
 			}
-			console.log(sub);
+			//console.log(sub);
+		}
+		function active(x){
+			var menu = document.getElementById('menu');
+			var sub = menu.getElementsByTagName('a');
+			for (var i = 0; i < sub.length; i++) {
+				sub[i].classList.remove("active");
+			}
+			x.classList.add("active");
+			//console.log("aaa");
 		}
 	</script>
 </head>
 <body>
 	<ul id="menu">
-		<li><a href="#" class="active" onmouseover="hover(this)" onclick="click(this)">HOME</a></li>
-		<li><a href="#" onmouseover="hover(this)" >About</a></li>
-		<li><a href="#" onmouseover="hover(this)" >Contact</a></li>
+		<li><a href="#" class="active" onmouseover="hover(this)" onclick="active(this)">HOME</a></li>
+		<li><a href="#" onmouseover="hover(this)" onclick="active(this)">About</a></li>
+		<li><a href="#" onmouseover="hover(this)" onclick="active(this)">Contact</a></li>
 	</ul>
 </body>
 </html>
