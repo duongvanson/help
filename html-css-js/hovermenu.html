@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOVER MENU</title>
+	<style>
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style-type: none;
+			background: #555;
+		}
+		li{
+			display: inline-block;
+		}
+		a{
+			display: block;
+			padding: 10px;
+			color: #fff;
+		}
+		a:hover{
+			background: #000;
+		}
+		.active{
+			background: #000;
+		}
+	</style>
+	<script>
+		function hover(x) {
+			var menu = document.getElementById('menu');
+			var sub = menu.getElementsByTagName('a');
+			for (var i = 0; i < sub.length; i++) {
+				sub[i].classList.remove("active");
+			}
+			console.log(sub);
+		}
+	</script>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="#" class="active" onmouseover="hover(this)" onclick="click(this)">HOME</a></li>
+		<li><a href="#" onmouseover="hover(this)" >About</a></li>
+		<li><a href="#" onmouseover="hover(this)" >Contact</a></li>
+	</ul>
+</body>
+</html>
